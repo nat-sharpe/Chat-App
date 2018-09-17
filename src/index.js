@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import HomepageSmart from './HomepageSmart';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<HomepageSmart />, document.getElementById('root'));
