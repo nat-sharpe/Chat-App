@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Homepage from './homepage';
+import Router from './router';
 
 // Builds page and keeps track of state
 class HomepageSmart extends Component {
@@ -26,7 +26,7 @@ class HomepageSmart extends Component {
               posts: [newWassup, ...this.state.posts]
           })
       };
-      return < Homepage posts={this.state.posts} makeWassup={makeWassup} />
+      return < Router posts={this.state.posts} makeWassup={makeWassup} />
   };
 };
 

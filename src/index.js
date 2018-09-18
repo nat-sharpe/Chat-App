@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Router from './router';
+import HomepageSmart from './homepage-smart';
 
-ReactDOM.render(<Router />, document.getElementById('root'));
+ReactDOM.render(<HomepageSmart />, document.getElementById('root'));
