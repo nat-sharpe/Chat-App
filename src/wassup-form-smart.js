@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import WassupForm from './WassupForm';
+import WassupForm from './wassup-form';
 
 // Takes user input and sends data to HomepageContainer
 class WassFormSmart extends Component {

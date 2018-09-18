@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
-import Homepage from './Homepage';
+import Homepage from './homepage';
 
 // Builds page and keeps track of state
 class HomepageSmart extends Component {
@@ -12,7 +11,7 @@ class HomepageSmart extends Component {
   };
 
   componentDidMount() {
-      fetch('http://0.tcp.ngrok.io:11971/wassups.json')
+      fetch('http://0.tcp.ngrok.io:11140/wassups.json')
           .then(response => response.json())
           .then(oldPosts => 
               this.setState({

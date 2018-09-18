@@ -1,6 +1,6 @@
 import React from 'react';
-import WassupFormSmart from './WassupFormSmart';
-import WassupList from './WassupList';
+import WassupFormSmart from './wassup-form-smart';
+import WassupList from './wassup-list';
 
 let Homepage = props => (
     <main>
