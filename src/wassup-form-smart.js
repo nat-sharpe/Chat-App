@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import WassupForm from './wassup-form';
+import { connect } from 'react-redux';
 
 // Takes user input and sends data to HomepageContainer
 class WassFormSmart extends Component {
@@ -17,11 +18,9 @@ class WassFormSmart extends Component {
             event.preventDefault();
             if (this.state.newWassup && this.state.user) {
                 let newPost = {
-                    id: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString()
-,
+                    id: Math.floor(Math.random() * 300).toString(),
                     user: this.state.user,
-                    userId: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString()
-,
+                    userId: Math.floor(Math.random() * 300).toString(),
                     content: this.state.newWassup
                 }
                 this.props.makeWassup(newPost);

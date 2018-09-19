@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Router from './router';
+import { connect } from 'react-redux';
 
-// Builds page and keeps track of state
 class HomepageSmart extends Component {
   constructor(props) {
       super(props);
@@ -11,7 +11,7 @@ class HomepageSmart extends Component {
   };
 
   componentDidMount() {
-      fetch('http://0.tcp.ngrok.io:11140/wassups.json')
+      fetch('http://0.tcp.ngrok.io:17762/wassups.json')
           .then(response => response.json())
           .then(oldPosts => 
               this.setState({

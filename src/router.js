@@ -1,9 +1,10 @@
 import React from 'react';
 import { HashRouter, Route, NavLink, Switch } from 'react-router-dom';
-import './App.css';
+import { Provider } from 'react-redux';
 import Profile from './profile';
 import About from './about';
 import Homepage from './homepage';
+import WassupPage from './wassup-page';
 
 let NavBar = () => 
     <nav>
@@ -12,14 +13,9 @@ let NavBar = () =>
         <NavLink to="/profile">Profile</NavLink>
     </nav>
 
-let WassupPage = (props) => {
-    let clickedWassup = props.posts.find(post => (post.id.toString() === props.match.params.id))
-    return clickedWassup ? <h3>{ clickedWassup.content }</h3> : <h3>Loading</h3>
-}
-
 let NotFound = () => <h1>404 Not Found</h1>
 
-let Router = (props) => 
+let Router = (props) =>
     <HashRouter>
         <div>
             <NavBar />
@@ -28,12 +24,12 @@ let Router = (props) =>
                     <Homepage {...routeProps} {...props} /> 
                     } 
                 />
-                 <Route exact path="/wassup/:id" render={routeProps =>
+                <Route exact path="/wassup/:id" render={routeProps =>
                     <WassupPage {...routeProps} {...props} /> 
                     } 
                 />
-                <Route path="/about" render={Profile}/>
-                <Route path="/profile" render={About}/>
+                <Route path="/about" render={About}/>
+                <Route path="/profile" render={Profile}/>
                 <Route path="/" render={NotFound}/>
             </Switch>    
         </div>
